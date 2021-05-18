@@ -1,0 +1,261 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap");
+.flex-box, .meals .meal-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-size: 10px;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 200vh;
+}
+
+.mobile-container {
+  background-color: white;
+  -webkit-box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.3);
+  width: 400px;
+  height: 800px;
+}
+
+.mobile-container .fav-container {
+  position: relative;
+  padding: 1rem;
+  padding-top: 4rem;
+  text-align: center;
+  color: white;
+  background-color: #0093e9;
+  background-image: linear-gradient(160deg, #23e90028 0%, #93d080d7 100%);
+  border: 5px;
+  height: 300px;
+}
+
+.mobile-container .fav-container h3 {
+  padding: 2rem;
+  padding-top: 2rem;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 2px;
+}
+
+.mobile-container .fav-container .fav-meals {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  list-style-type: none;
+  padding: 0 30px;
+}
+
+.mobile-container .fav-container .fav-meals li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+}
+
+.mobile-container .fav-container .fav-meals li img {
+  width: 50px;
+  height: 50px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.mobile-container .fav-container .fav-meals li span {
+  font-size: 1rem;
+  width: 50px;
+  text-align: center;
+  /*Texto largos agregar puntos supensivos*/
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /**/
+}
+
+.mobile-container .fav-container .fav-meals li .clear {
+  z-index: 20;
+  background-color: white;
+  font-size: 1.2rem;
+  border: none;
+  color: #9c0e0e;
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  opacity: 0;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.mobile-container .fav-meals li:hover .clear {
+  opacity: 1;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.mobile-container .fav-container::before {
+  /*Crea un cambio gradual entre los colores de dos secciones*/
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120px;
+  background: -webkit-gradient(linear, left top, left bottom, from(white), to(transparent));
+  background: linear-gradient(to bottom, white, transparent);
+  z-index: 10;
+}
+
+.mobile-container .fav-container::after {
+  /*Crea un cambio gradual entre los colores de dos secciones*/
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 120px;
+  background: -webkit-gradient(linear, left bottom, left top, from(white), to(transparent));
+  background: linear-gradient(to top, white, transparent);
+  z-index: 10;
+}
+
+img {
+  max-width: 100%;
+}
+
+header {
+  padding: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header input {
+  background-color: #faf8f8;
+  padding: 0.5rem 1rem;
+  border-radius: 20px 0 0 20px;
+  border: 1px solid #aaa;
+}
+
+header button {
+  background-color: transparent;
+  border: 1px solid #aaa;
+  color: #aaa;
+  font-size: 2rem;
+  border-radius: 0 20px 20px 0;
+  padding: 1px 10px;
+  padding-right: 12px;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+header button:hover {
+  background-color: #aaa;
+  color: white;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.meals {
+  position: relative;
+  bottom: 100px;
+  padding: 40px;
+  z-index: 20;
+}
+
+.meals .meal {
+  -webkit-box-shadow: 0 0 10px 1px #aaa;
+          box-shadow: 0 0 10px 1px #aaa;
+  border-radius: 10px;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.meals .meal-header {
+  position: relative;
+}
+
+.meals .meal-header span {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding: 7px 10px;
+  background-color: #fff;
+}
+
+.meals .meal-header img {
+  padding-bottom: 30px;
+}
+
+.meals .meal-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0px 35px 25px 35px;
+}
+
+.meals .meal-body h4 {
+  font-size: 14px;
+}
+
+.meals .meal-body .fav-btn {
+  border: none;
+  background-color: transparent;
+  font-size: 1.7rem;
+  cursor: pointer;
+  color: #aaa;
+}
+
+.meals .meal-body .fav-btn.active {
+  color: #e45353;
+}
+/*# sourceMappingURL=style.css.map */
